@@ -1,224 +1,256 @@
 {
-  "name": "Your Name",
-  "label": "Optional Label",
-  "image_path": "img/default-image.png",
+  "name": "Samira El Gdachi",
+  "label": "Ph.D. | Atmospheric Physics",
+  "image_path": "icon.png",
   "contact": {
-    "email": "FirstLast@Sample.com",
-    "phone": "123-456-7890",
-    "location": "City, State, Country"
+    "email": "samira.el-gdachi@cnrs.fr",
+    "phone": "",
+    "location": "Toulouse, 31400, France"
   },
-  "summary": "A short summary of who you are, your background, experience, and interests to give visitors a quick introduction to you.",
-  "base_url": "127.0.0.1:5500",
+  "summary": "Atmospheric physicist (Ph.D.) specialized in boundary layer processes and mountain clouds, with experience in high-resolution atmospheric modeling (Meso-NH, LIMA microphysics), aerosol–cloud–radiation interactions, scientific computing (Python, R, Fortran 90), and analysis of observational and model datasets.",
+  "base_url": "https://samiraelgdachti-git.github.io",
   "social_links": [
     {
-      "label": "Personal Website",
-      "url": "https://sample.com",
+      "label": "Website",
+      "url": "https://samiraelgdachti-git.github.io",
       "svg_path": "img/globe.svg"
     },
     {
-      "label": "First Social",
-      "url": "https://sample.com",
-      "svg_path": "img/linkedin.svg"
-    },
-    {
-      "label": "Second Social",
-      "url": "https://sample.com",
-      "svg_path": "img/github.svg"
+      "label": "ORCID",
+      "url": "https://orcid.org/0009-0000-4081-2271",
+      "svg_path": "img/globe.svg"
     }
   ],
   "work_experience": [
     {
-      "company": "Latest Job",
-      "position": "Position One",
-      "url": "https://sample.com",
-      "start_date": "01/01/2020",
-      "end_date": "Present",
-      "summary": "Short summary about present job and what the position entails",
+      "company": "LAERO – Laboratoire d’Aérologie (CNRS)",
+      "position": "Postdoctoral Researcher",
+      "url": "",
+      "start_date": "01/2025",
+      "end_date": "08/2026",
+      "summary": "ANR-funded project ICCARE (Ice Crystals in Deep Convective Clouds: Interactions with Aerosols, Radiation and Electricity). Research topic: Investigation of the impact of aerosol–microphysics–radiation–electricity interactions on the evolution of deep convective systems.",
       "highlights": [
-        "First Duty of Current Job",
-        "Second Duty of Current Job",
-        "Third Duty of Current Job"
+        "Research on deep convective systems within ANR project ICCARE",
+        "Focus on coupled aerosol–microphysics–radiation–electricity interactions",
+        "High-resolution modeling and process-level analysis (as per CV)"
       ]
     },
     {
-      "company": "Previous Job",
-      "position": "Position Two",
-      "url": "https://sample.com",
-      "start_date": "01/01/2010",
-      "end_date": "01/01/2020",
-      "summary": "Short summary about previous job and what that position entailed",
+      "company": "LACy (Laboratory of Atmosphere and Cyclones) & LAERO – Laboratoire d’Aérologie",
+      "position": "Internship in Climate Science (ANR BIO-MAÏDO)",
+      "url": "",
+      "start_date": "02/2021",
+      "end_date": "08/2021",
+      "summary": "ANR-funded project BIO-MAÏDO (Bio-physicochemistry of tropical clouds at Maïdo). Research topic: Study of the boundary layer and slope clouds development on Reunion Island.",
       "highlights": [
-        "First Duty of Previous Job",
-        "Second Duty of Previous Job",
-        "Third Duty of Previous Job"
+        "Boundary layer and slope cloud development on Reunion Island",
+        "Work within BIO-MAÏDO campaign context (as per CV)"
+      ]
+    },
+    {
+      "company": "General Direction of Meteorology, Morocco (with WMO collaboration)",
+      "position": "Internship in Climate Science",
+      "url": "",
+      "start_date": "07/2020",
+      "end_date": "09/2020",
+      "summary": "Research topic: Development of climate monitoring products.",
+      "highlights": [
+        "Development of climate monitoring products"
+      ]
+    },
+    {
+      "company": "CASA-ANFA meteorological station, General Direction of Meteorology, Morocco",
+      "position": "Internship in Climate Science",
+      "url": "",
+      "start_date": "07/2019",
+      "end_date": "08/2019",
+      "summary": "Research topic: Aeronautical observation and protection.",
+      "highlights": [
+        "Aeronautical observation and protection"
       ]
     }
   ],
   "projects": [
     {
-      "title": "My First Project",
-      "summary": "Short summary about my first project",
-      "url": "https://sample.com",
+      "title": "Ph.D. Thesis — The evolution of the atmospheric boundary layer and mountain clouds on Reunion Island",
+      "summary": "Ph.D. thesis (University of Reunion) focused on boundary layer evolution and mountain clouds over Reunion Island.",
+      "url": "",
       "highlights": [
-        "First Highlight of Project One",
-        "Second Highlight of Project One",
-        "Third Highlight of Project One"
+        "Atmospheric boundary layer evolution over complex terrain",
+        "Mountain clouds over Reunion Island",
+        "High-resolution atmospheric analysis (as per CV)"
       ],
       "images": [
         {
-          "img_path": "https://picsum.photos/600/338?random=1",
-          "caption": "Image Caption 1"
-        },
-        {
-          "img_path": "https://picsum.photos/600/338?random=2",
-          "caption": "Image Caption 2"
-        },
-        {
-          "img_path": "https://picsum.photos/600/338?random=3",
-          "caption": "Image Caption 3"
+          "img_path": "img/default-image.png",
+          "caption": "Add a thesis-related figure/image if desired"
         }
       ]
     },
     {
-      "title": "My Second Project",
-      "summary": "Short summary about my second project",
-      "url": "https://sample.com",
+      "title": "Journal Article (2024) — Thermodynamic processes driving thermal circulations on slopes",
+      "summary": "Modeling anabatic and katabatic flows on Reunion Island (JGR: Atmospheres, 2024).",
+      "url": "https://doi.org/10.1029/2023JD040431",
       "highlights": [
-        "First Highlight of Project Two",
-        "Second Highlight of Project Two",
-        "Third Highlight of Project Two"
+        "Thermodynamic processes driving slope thermal circulations",
+        "Modeling anabatic and katabatic flows on Reunion Island"
       ],
       "images": [
         {
-          "img_path": "https://picsum.photos/600/338?random=4",
-          "caption": "Image Caption 4"
-        },
+          "img_path": "img/default-image.png",
+          "caption": "Add a figure from the paper if you have rights to use it"
+        }
+      ]
+    },
+    {
+      "title": "Conference Talk/Poster (EGU 2024) — Investigating Cloud Microphysical Properties",
+      "summary": "High-resolution numerical simulations and observations in the Indian Ocean Region (EGU 2024).",
+      "url": "https://doi.org/10.5194/egusphere-egu24-7283",
+      "highlights": [
+        "Cloud microphysical properties",
+        "High-resolution simulations and observations"
+      ],
+      "images": [
         {
-          "img_path": "https://picsum.photos/600/338?random=5",
-          "caption": "Image Caption 5"
-        },
-        {
-          "img_path": "https://picsum.photos/600/338?random=6",
-          "caption": "Image Caption 6"
+          "img_path": "img/default-image.png",
+          "caption": "Add a conference figure/poster image if available"
         }
       ]
     }
   ],
   "volunteer_experience": [
     {
-      "organization": "Latest Organization",
-      "position": "Position One",
-      "url": "https://sample.com",
-      "start_date": "01/01/2020",
-      "end_date": "Present",
-      "summary": "Short summary about present volunteer work",
+      "organization": "University of la Reunion",
+      "position": "Member of the Doctoral School Council, Science and Technology Department",
+      "url": "",
+      "start_date": "02/2023",
+      "end_date": "12/2024",
+      "summary": "Member of the Doctoral School Council (Science and Technology Department).",
       "highlights": [
-        "First Duty of Current Organization",
-        "Second Duty of Current Organization",
-        "Third Duty of Current Organization"
+        "Doctoral school service and council participation (as per CV)"
       ]
     },
     {
-      "organization": "Previous Organization",
-      "position": "Position Two",
-      "url": "https://sample.com",
-      "start_date": "01/01/2010",
-      "end_date": "01/01/2020",
-      "summary": "Short summary about previous volunteer work",
+      "organization": "Rotaract EHTP (affiliated with Rotary International)",
+      "position": "Head of Media and Design Cell",
+      "url": "",
+      "start_date": "09/2018",
+      "end_date": "07/2020",
+      "summary": "Leadership role in a youth charity club affiliated with Rotary International.",
       "highlights": [
-        "First Duty of Previous Organization",
-        "Second Duty of Previous Organization",
-        "Third Duty of Previous Organization"
+        "Led media and design activities for Rotaract EHTP (as per CV)"
       ]
     }
   ],
   "education": [
     {
-      "institution": "Institution One",
-      "location": "Institution One Location",
-      "url": "https://sample.com",
+      "institution": "University of Reunion",
+      "location": "Reunion Island, France",
+      "url": "",
       "degrees": [
-        "Master of Science in Computer Science",
-        "Minor in Mathematics"
+        "Ph.D. in Atmospheric Physics"
       ],
-      "honors": ["Outstanding Student Award", "Dean's List"],
-      "gpa_cumulative": "3.5",
-      "gpa_major": "4.0",
-      "graduation_date": "01/01/2005"
+      "honors": [],
+      "gpa_cumulative": "",
+      "gpa_major": "",
+      "graduation_date": "09/2024"
     },
     {
-      "institution": "Institution Two",
-      "location": "Institution Two Location",
-      "url": "https://sample.com",
-      "degrees": ["Bachelor of Science in Physics"],
-      "honors": ["Scholarship Recipient"],
-      "gpa_cumulative": "3.2",
-      "gpa_major": "3.9",
-      "graduation_date": "01/01/2000"
+      "institution": "Hassania School of Public Works (EHTP)",
+      "location": "Morocco",
+      "url": "",
+      "degrees": [
+        "Engineering Diploma (equivalent to M.Sc) in Meteorology and Climate Science"
+      ],
+      "honors": [],
+      "gpa_cumulative": "",
+      "gpa_major": "",
+      "graduation_date": "07/2021"
+    },
+    {
+      "institution": "National School of Applied Sciences (ENSAO)",
+      "location": "",
+      "url": "",
+      "degrees": [
+        "Engineering studies in Electrical Engineering"
+      ],
+      "honors": [],
+      "gpa_cumulative": "",
+      "gpa_major": "",
+      "graduation_date": "07/2018"
+    },
+    {
+      "institution": "Technical high school (TSI) — Preparatory classes",
+      "location": "",
+      "url": "",
+      "degrees": [
+        "Preparatory classes in Technology and Industrial Sciences (TSI)"
+      ],
+      "honors": [],
+      "gpa_cumulative": "",
+      "gpa_major": "",
+      "graduation_date": "07/2017"
     }
   ],
   "skills": [
     {
-      "name": "My First Skill",
-      "proficiency": 100,
-      "proficiency_label": "Proficiency Level"
+      "name": "Atmospheric Modeling (Meso-NH)",
+      "proficiency": 0,
+      "proficiency_label": "Not provided in CV"
     },
     {
-      "name": "My Second Skill",
-      "proficiency": 80,
-      "proficiency_label": "Proficiency Level"
-    }
-  ],
-  "interests": [
-    {
-      "name": "My First Hobby",
-      "summary": "Short summary about my first Hobby",
-      "images": [
-        {
-          "img_path": "https://picsum.photos/600/338?random=7",
-          "caption": "Image Caption 7"
-        },
-        {
-          "img_path": "https://picsum.photos/600/338?random=8",
-          "caption": "Image Caption 8"
-        }
-      ]
+      "name": "Cloud Microphysics (LIMA), Deep Convection, Aerosol–Cloud–Radiation Interactions",
+      "proficiency": 0,
+      "proficiency_label": "Not provided in CV"
     },
     {
-      "name": "My Second Hobby",
-      "summary": "Short summary about my second hobby",
-      "images": [
-        {
-          "img_path": "https://picsum.photos/600/338?random=9",
-          "caption": "Image Caption 9"
-        },
-        {
-          "img_path": "https://picsum.photos/600/338?random=10",
-          "caption": "Image Caption 10"
-        }
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "English",
-      "fluency": "Native speaker"
+      "name": "Model Development & Diagnostics (process-level budgets, parameterization evaluation)",
+      "proficiency": 0,
+      "proficiency_label": "Not provided in CV"
     },
     {
-      "language": "American Sign Language",
-      "fluency": "Professional Working Proficiency"
+      "name": "Python (data analysis, post-processing)",
+      "proficiency": 0,
+      "proficiency_label": "Not provided in CV"
+    },
+    {
+      "name": "R (data analysis, post-processing)",
+      "proficiency": 0,
+      "proficiency_label": "Not provided in CV"
+    },
+    {
+      "name": "Fortran 90 (model development / physics routines)",
+      "proficiency": 0,
+      "proficiency_label": "Not provided in CV"
+    },
+    {
+      "name": "Data Analysis (large observational and model datasets)",
+      "proficiency": 0,
+      "proficiency_label": "Not provided in CV"
+    },
+    {
+      "name": "Scientific Writing (manuscripts, technical reports, documentation)",
+      "proficiency": 0,
+      "proficiency_label": "Not provided in CV"
+    },
+    {
+      "name": "Teaching Assistance (Mathematics for Physics: Python lab work, 18H)",
+      "proficiency": 0,
+      "proficiency_label": "Not provided in CV"
     }
   ],
+  "interests": [],
+  "languages": [],
   "references": [
     {
-      "name": "Person One",
-      "relation": "Previous Boss",
-      "reference": "Some nice things that Person One said about you, your work ethic, and how you provided value to their team."
+      "name": "Christelle Barthe",
+      "relation": "Reference (as listed in CV)",
+      "reference": "Contact: christelle.barthe@cnrs.fr"
     },
     {
-      "name": "Person Two",
-      "relation": "Previous Coworker",
-      "reference": "More kind things that Person Two said about you, what it was like working with you, and things you've accomplished."
+      "name": "Pierre Tulet",
+      "relation": "Reference (as listed in CV)",
+      "reference": "Contact: pierre.tulet@cnrs.fr"
     }
   ]
 }
