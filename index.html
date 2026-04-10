@@ -1,612 +1,310 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samira El Gdachi — Atmospheric Physicist</title>
+  <meta name="description" content="Samira El Gdachi — Ph.D. in Atmospheric Physics. Postdoctoral researcher at LAERO (CNRS), specializing in boundary layer processes, mountain clouds, and aerosol–cloud–radiation interactions.">
+  <meta name="author" content="Samira El Gdachi">
+  <meta property="og:title" content="Samira El Gdachi — Atmospheric Physicist">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samiraelgdachti-git.github.io">
+  <meta property="og:image" content="https://samiraelgdachti-git.github.io/icon.png">
+  <meta name="theme-color" content="#0a1628">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Hero specifics ── */
+    .hero-section {
+      min-height: calc(100vh - var(--nav-h));
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: calc(var(--nav-h) + 4rem) 2rem 4rem;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -15%; right: -8%;
+      width: 650px; height: 650px;
+      background: radial-gradient(circle, rgba(94,173,247,0.07) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      bottom: -10%; left: -12%;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(247,163,94,0.05) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    .hero-avatar {
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border);
+      box-shadow: 0 0 60px rgba(94,173,247,0.12);
+    }
+    .hero-label {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .hero-name {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .hero-summary {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      align-items: center;
+    }
+    .hero-meta a, .hero-meta span {
+      font-size: 0.87rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .hero-meta a:hover { color: var(--accent); }
+    .hero-meta svg { width: 15px; height: 15px; flex-shrink: 0; }
+    .sep { color: var(--text-muted); font-size: 0.55rem; }
 
-    <!-- Site Info -->
-    <title>Samira El Gdachi - Portfolio</title>
-    <meta name="description" content="Samira El Gdachi - Atmospheric physicist (Ph.D.) in boundary layer processes and mountain clouds, with experience in high-resolution atmospheric modeling (Meso-NH), aerosol–cloud–radiation interactions, scientific computing (Python, R, Fortran 90), and analysis of observational and model datasets.">
-    <meta name="author" content="Samira El Gdachi">
+    /* ── Highlights strip ── */
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+    .highlight-card {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: rgba(15,31,56,0.35);
+    }
+    .highlight-card .num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .highlight-card .lbl {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
 
-    <!-- Open Graph Tags: The title of the page for social media sharing. It can match the title tag or be more descriptive. -->
-    <meta property="og:title" content="Samira El Gdachi">
+    /* ── Video section ── */
+    .video-section {
+      margin-bottom: 4rem;
+    }
+    .video-section h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: 0.35rem;
+    }
+    .video-section .sub {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
 
-    <!-- Open Graph Tags: Typically set to "website" for static sites or "article" for content-heavy pages. -->
-    <meta property="og:type" content="website">
+    /* ── Research interests ── */
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .interest-card {
+      padding: 1.25rem 1.4rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: rgba(15,31,56,0.35);
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .interest-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+    .interest-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    .interest-card p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .interest-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
 
-    <!-- Open Graph Tags: The URL of the page, used to ensure link previews resolve to the correct page. -->
-    <meta property="og:url" content="https://samiraelgdachti-git.github.io/index.html">
+    @media (max-width: 768px) {
+      .hero-section { padding: calc(var(--nav-h) + 2rem) 1.25rem 3rem; min-height: auto; }
+      .hero-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+      .hero-avatar { width: 140px; height: 140px; }
+      .hero-meta { justify-content: center; }
+      .highlights { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
 
-    <!-- Open Graph Tags: URL of an image that represents the page. Useful for link previews. -->
-    <meta property="og:image" content="https://samiraelgdachti-git.github.io/icon.png">
+<!-- Navigation -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">S. El Gdachi</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg>
+    </button>
+    <div class="nav-links">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="research.html">Recherche</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
 
-    <!-- Open Graph Tags: Provides an alternative text for the image to improve accessibility. -->
-    <meta property="og:image:alt" content="Samira El Gdachi Profile Image">
+<!-- Hero -->
+<header class="hero-section">
+  <div class="hero-inner">
 
-    <!-- Preconnect for Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Custom Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-          rel="stylesheet">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/modern_normalize.css" />
-    <link rel="stylesheet" href="css/html5bp.css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <!-- Set a theme color that matches your website's primary color -->
-    <meta name="theme-color" content="#fafafa">
-
-    <!-- Favicon for all browsers -->
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-
-    <!-- Apple touch icon for iOS devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
-
-    <!-- Web app manifest for Progressive Web Apps -->
-    <link rel="manifest" href="/site.webmanifest">
-
-    <!-- Content Security Policy: Uncomment to enhance security by restricting where content can be loaded from (useful for preventing certain attacks like XSS). Update if adding external sources (e.g., Google Fonts, Bootstrap CDN, analytics, etc). -->
-    <!-- <meta http-equiv="Content-Security-Policy" content=" default-src 'self'; script-src 'self' code.jquery.com; style-src 'self' fonts.googleapis.com; font-src fonts.gstatic.com; img-src 'self' images.examplecdn.com; "> -->
-  </head>
-
-  <body>
-    <header class="page-header">
-      <div class="container">
-        <div class="header-top flex-responsive">
-          
-            <img class="header-image"
-                 width="256"
-                 height="256"
-                 src="icon.png"
-                 alt="Samira El Gdachi Profile Image" />
-          
-          <div class="header-info">
-            <h1>Samira El Gdachi</h1>
-            <h2 class="header-label">Ph.D. | Atmospheric Physics</h2>
-            
-              <address>
-                <ul class="inline-list flex-responsive">
-                  
-                    <li>
-                      <a href="mailto:samira.el-gdachi@cnrs.fr">samira.el-gdachi@cnrs.fr</a>
-                    </li>
-                  
-                  
-                  <li>Toulouse, 31400, France</li>
-                </ul>
-              </address>
-            
-            
-              <ul class="inline-list flex-responsive">
-                
-                  <li>
-                    <a href="https://samiraelgdachti-git.github.io"
-                       rel="noopener noreferrer"
-                       aria-label="Website"
-                       class="link-with-icon">
-                      <svg aria-hidden="true"
-     xmlns="http://www.w3.org/2000/svg"
-     role="img"
-     width="16"
-     height="16"
-     fill="currentColor"
-     class="bi bi-globe-americas"
-     viewBox="0 0 16 16">
-  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
-</svg>
-
-                      Website
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://orcid.org/0009-0000-4081-2271"
-                       rel="noopener noreferrer"
-                       aria-label="ORCID"
-                       class="link-with-icon">
-                      <svg aria-hidden="true"
-     xmlns="http://www.w3.org/2000/svg"
-     role="img"
-     width="16"
-     height="16"
-     fill="currentColor"
-     class="bi bi-globe-americas"
-     viewBox="0 0 16 16">
-  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
-</svg>
-
-                      ORCID
-                    </a>
-                  </li>
-                
-              </ul>
-            
-            <p class="header-summary">Atmospheric physicist (Ph.D.) specialized in boundary layer processes and mountain clouds, with experience in high-resolution atmospheric modeling (Meso-NH, LIMA microphysics), aerosol–cloud–radiation interactions, scientific computing (Python, R, Fortran 90), and analysis of observational and model datasets.</p>
-          </div>
+    <div class="hero-grid fade-in">
+      <img class="hero-avatar" src="icon.png" alt="Samira El Gdachi" width="180" height="180">
+      <div>
+        <div class="hero-label">Ph.D. &middot; Physique Atmosphérique</div>
+        <h1 class="hero-name">Samira El Gdachi</h1>
+        <p class="hero-summary">Chercheuse postdoctorale au <strong>LAERO (CNRS)</strong>, spécialisée dans les processus de couche limite atmosphérique, les nuages de montagne et les interactions aérosol–nuage–rayonnement. J'utilise la modélisation numérique haute résolution (Meso-NH, microphysique LIMA) pour comprendre l'évolution des systèmes convectifs profonds.</p>
+        <div class="hero-meta">
+          <a href="mailto:samira.el-gdachi@cnrs.fr">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+            samira.el-gdachi@cnrs.fr
+          </a>
+          <span class="sep">&bull;</span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+            Toulouse, France
+          </span>
+          <span class="sep">&bull;</span>
+          <a href="https://orcid.org/0009-0000-4081-2271" target="_blank" rel="noopener">ORCID</a>
+          <span class="sep">&bull;</span>
+          <a href="https://www.linkedin.com/in/samira-el-gdachi" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-      </div>
-    </header>
-
-    <div class="page-content">
-      <div class="container">
-        <main>
-          
-            <section>
-              <h2 class="section-heading">Work Experience</h2>
-              
-                <section>
-                  <h3>
-                    
-                      Postdoctoral Researcher at LAERO – Laboratoire d’Aérologie (CNRS)
-                    
-                  </h3>
-                  
-                    <p class="section-label">01/2025 - 08/2026</p>
-                  
-                  <p>ANR-funded project ICCARE (Ice Crystals in Deep Convective Clouds: Interactions with Aerosols, Radiation and Electricity). Research topic: Investigation of the impact of aerosol–microphysics–radiation–electricity interactions on the evolution of deep convective systems.</p>
-                  
-                    <ul>
-                      <li>Research on deep convective systems within ANR project ICCARE</li><li>Focus on coupled aerosol–microphysics–radiation–electricity interactions</li><li>High-resolution modeling and process-level analysis (as per CV)</li>
-                    </ul>
-                  
-                </section>
-              
-                <section>
-                  <h3>
-                    
-                      Internship in Climate Science (ANR BIO-MAÏDO) at LACy (Laboratory of Atmosphere and Cyclones) &amp; LAERO – Laboratoire d’Aérologie
-                    
-                  </h3>
-                  
-                    <p class="section-label">02/2021 - 08/2021</p>
-                  
-                  <p>ANR-funded project BIO-MAÏDO (Bio-physicochemistry of tropical clouds at Maïdo). Research topic: Study of the boundary layer and slope clouds development on Reunion Island.</p>
-                  
-                    <ul>
-                      <li>Boundary layer and slope cloud development on Reunion Island</li><li>Work within BIO-MAÏDO campaign context (as per CV)</li>
-                    </ul>
-                  
-                </section>
-              
-                <section>
-                  <h3>
-                    
-                      Internship in Climate Science at General Direction of Meteorology, Morocco (with WMO collaboration)
-                    
-                  </h3>
-                  
-                    <p class="section-label">07/2020 - 09/2020</p>
-                  
-                  <p>Research topic: Development of climate monitoring products.</p>
-                  
-                    <ul>
-                      <li>Development of climate monitoring products</li>
-                    </ul>
-                  
-                </section>
-              
-                <section>
-                  <h3>
-                    
-                      Internship in Climate Science at CASA-ANFA meteorological station, General Direction of Meteorology, Morocco
-                    
-                  </h3>
-                  
-                    <p class="section-label">07/2019 - 08/2019</p>
-                  
-                  <p>Research topic: Aeronautical observation and protection.</p>
-                  
-                    <ul>
-                      <li>Aeronautical observation and protection</li>
-                    </ul>
-                  
-                </section>
-              
-            </section>
-          
-
-          
-            <section>
-              <h2 class="section-heading">Projects</h2>
-              
-                <section>
-                  <h3>
-                    
-                      Ph.D. Thesis — The evolution of the atmospheric boundary layer and mountain clouds on Reunion Island
-                    
-                  </h3>
-                  <p>Ph.D. thesis (University of Reunion) focused on boundary layer evolution and mountain clouds over Reunion Island.</p>
-                  
-                    <ul>
-                      <li>Atmospheric boundary layer evolution over complex terrain</li><li>Mountain clouds over Reunion Island</li><li>High-resolution atmospheric analysis (as per CV)</li>
-                    </ul>
-                  
-                  
-                    <div class="gallery main-gallery">
-                      
-                        <figure>
-                          <img width="600"
-                               height="338"
-                               src="img/default-image.png"
-                               alt="Add a thesis-related figure/image if desired">
-                          <figcaption>Add a thesis-related figure/image if desired</figcaption>
-                        </figure>
-                      
-                    </div>
-                  
-                </section>
-              
-                <section>
-                  <h3>
-                    
-                      <a href="https://doi.org/10.1029/2023JD040431">Journal Article (2024) — Thermodynamic processes driving thermal circulations on slopes</a>
-                    
-                  </h3>
-                  <p>Modeling anabatic and katabatic flows on Reunion Island (JGR: Atmospheres, 2024).</p>
-                  
-                    <ul>
-                      <li>Thermodynamic processes driving slope thermal circulations</li><li>Modeling anabatic and katabatic flows on Reunion Island</li>
-                    </ul>
-                  
-                  
-                    <div class="gallery main-gallery">
-                      
-                        <figure>
-                          <img width="600"
-                               height="338"
-                               src="img/default-image.png"
-                               alt="Add a figure from the paper if you have rights to use it">
-                          <figcaption>Add a figure from the paper if you have rights to use it</figcaption>
-                        </figure>
-                      
-                    </div>
-                  
-                </section>
-              
-                <section>
-                  <h3>
-                    
-                      <a href="https://doi.org/10.5194/egusphere-egu24-7283">Conference Talk/Poster (EGU 2024) — Investigating Cloud Microphysical Properties</a>
-                    
-                  </h3>
-                  <p>High-resolution numerical simulations and observations in the Indian Ocean Region (EGU 2024).</p>
-                  
-                    <ul>
-                      <li>Cloud microphysical properties</li><li>High-resolution simulations and observations</li>
-                    </ul>
-                  
-                  
-                    <div class="gallery main-gallery">
-                      
-                        <figure>
-                          <img width="600"
-                               height="338"
-                               src="img/default-image.png"
-                               alt="Add a conference figure/poster image if available">
-                          <figcaption>Add a conference figure/poster image if available</figcaption>
-                        </figure>
-                      
-                    </div>
-                  
-                </section>
-              
-            </section>
-          
-
-          
-            <section>
-              <h2 class="section-heading">Volunteer Experience</h2>
-              
-                <section>
-                  <h3>
-                    
-                      Member of the Doctoral School Council, Science and Technology Department at University of la Reunion
-                    
-                  </h3>
-                  
-                    <p class="section-label">02/2023 - 12/2024</p>
-                  
-                  <p>Member of the Doctoral School Council (Science and Technology Department).</p>
-                  
-                    <ul>
-                      <li>Doctoral school service and council participation (as per CV)</li>
-                    </ul>
-                  
-                </section>
-              
-                <section>
-                  <h3>
-                    
-                      Head of Media and Design Cell at Rotaract EHTP (affiliated with Rotary International)
-                    
-                  </h3>
-                  
-                    <p class="section-label">09/2018 - 07/2020</p>
-                  
-                  <p>Leadership role in a youth charity club affiliated with Rotary International.</p>
-                  
-                    <ul>
-                      <li>Led media and design activities for Rotaract EHTP (as per CV)</li>
-                    </ul>
-                  
-                </section>
-              
-            </section>
-          
-
-          
-            <section>
-              <h2 class="section-heading">References</h2>
-              
-                <section>
-                  <h3>Christelle Barthe</h3>
-                  <p class="section-label">Reference (as listed in CV)</p>
-                  
-                    <blockquote>
-                      Contact: christelle.barthe@cnrs.fr
-                    </blockquote>
-                  
-                </section>
-              
-                <section>
-                  <h3>Pierre Tulet</h3>
-                  <p class="section-label">Reference (as listed in CV)</p>
-                  
-                    <blockquote>
-                      Contact: pierre.tulet@cnrs.fr
-                    </blockquote>
-                  
-                </section>
-              
-            </section>
-          
-        </main>
-
-        <!-- Sidebar Section -->
-        <aside>
-          
-            <section>
-              <h2 class="section-heading">Education</h2>
-              
-                <section>
-                  <h3>
-                    
-                      University of Reunion
-                    
-                  </h3>
-                  <p class="section-label">Reunion Island, France</p>
-                  
-                    <h4>Degrees</h4>
-                    <ul>
-                      <li>Ph.D. in Atmospheric Physics</li>
-                    </ul>
-                  
-                  
-                  
-                    <p>
-                      
-                      
-                      <span class="block">Graduation Date: 09/2024</span>
-                    </p>
-                  
-                </section>
-              
-                <section>
-                  <h3>
-                    
-                      Hassania School of Public Works (EHTP)
-                    
-                  </h3>
-                  <p class="section-label">Morocco</p>
-                  
-                    <h4>Degrees</h4>
-                    <ul>
-                      <li>Engineering Diploma (equivalent to M.Sc) in Meteorology and Climate Science</li>
-                    </ul>
-                  
-                  
-                  
-                    <p>
-                      
-                      
-                      <span class="block">Graduation Date: 07/2021</span>
-                    </p>
-                  
-                </section>
-              
-                <section>
-                  <h3>
-                    
-                      National School of Applied Sciences (ENSAO)
-                    
-                  </h3>
-                  
-                  
-                    <h4>Degrees</h4>
-                    <ul>
-                      <li>Engineering studies in Electrical Engineering</li>
-                    </ul>
-                  
-                  
-                  
-                    <p>
-                      
-                      
-                      <span class="block">Graduation Date: 07/2018</span>
-                    </p>
-                  
-                </section>
-              
-                <section>
-                  <h3>
-                    
-                      Technical high school (TSI) — Preparatory classes
-                    
-                  </h3>
-                  
-                  
-                    <h4>Degrees</h4>
-                    <ul>
-                      <li>Preparatory classes in Technology and Industrial Sciences (TSI)</li>
-                    </ul>
-                  
-                  
-                  
-                    <p>
-                      
-                      
-                      <span class="block">Graduation Date: 07/2017</span>
-                    </p>
-                  
-                </section>
-              
-            </section>
-          
-
-          
-            <section>
-              <h2 class="section-heading">Skills</h2>
-              <ul class="unstyled-list">
-                
-                  <li>
-                    <h3>Atmospheric Modeling (Meso-NH)</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill w-0"
-                           role="meter"
-                           aria-valuenow="0"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Not provided in CV</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>Cloud Microphysics (LIMA), Deep Convection, Aerosol–Cloud–Radiation Interactions</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill w-0"
-                           role="meter"
-                           aria-valuenow="0"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Not provided in CV</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>Model Development &amp; Diagnostics (process-level budgets, parameterization evaluation)</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill w-0"
-                           role="meter"
-                           aria-valuenow="0"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Not provided in CV</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>Python (data analysis, post-processing)</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill w-0"
-                           role="meter"
-                           aria-valuenow="0"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Not provided in CV</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>R (data analysis, post-processing)</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill w-0"
-                           role="meter"
-                           aria-valuenow="0"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Not provided in CV</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>Fortran 90 (model development / physics routines)</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill w-0"
-                           role="meter"
-                           aria-valuenow="0"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Not provided in CV</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>Data Analysis (large observational and model datasets)</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill w-0"
-                           role="meter"
-                           aria-valuenow="0"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Not provided in CV</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>Scientific Writing (manuscripts, technical reports, documentation)</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill w-0"
-                           role="meter"
-                           aria-valuenow="0"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Not provided in CV</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>Teaching Assistance (Mathematics for Physics: Python lab work, 18H)</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill w-0"
-                           role="meter"
-                           aria-valuenow="0"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Not provided in CV</span>
-                      </div>
-                    </div>
-                  </li>
-                
-              </ul>
-            </section>
-          
-
-          
-
-          
-        </aside>
       </div>
     </div>
 
-    <footer class="page-footer">
-      <div class="container">
-        <p>© 2026 Samira El Gdachi. All rights reserved.</p>
+    <!-- Key numbers -->
+    <div class="highlights fade-in">
+      <div class="highlight-card">
+        <span class="num">3</span>
+        <span class="lbl">Publications</span>
       </div>
-    </footer>
+      <div class="highlight-card">
+        <span class="num">3</span>
+        <span class="lbl">Articles en préparation</span>
+      </div>
+      <div class="highlight-card">
+        <span class="num">5</span>
+        <span class="lbl">Présentations internationales</span>
+      </div>
+      <div class="highlight-card">
+        <span class="num" style="font-size:1.2rem;">MSCA</span>
+        <span class="lbl">Seal of Excellence (89.2%)</span>
+      </div>
+    </div>
 
-    <script src="js/app.js"></script>
-  </body>
+    <!-- Video MT180 -->
+    <div class="video-section fade-in">
+      <h2>Ma thèse en 180 secondes</h2>
+      <p class="sub">Concours de vulgarisation scientifique — 2024</p>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/uszlqa5Jbrc"
+                title="Ma thèse en 180 secondes — Samira El Gdachi"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <!-- Research interests -->
+    <div class="fade-in">
+      <h2 class="section-title">Thèmes de recherche</h2>
+      <hr class="section-divider">
+      <div class="interests-grid">
+        <div class="interest-card">
+          <span class="interest-icon">&#9729;</span>
+          <h3>Nuages orographiques</h3>
+          <p>Cycle de vie des nuages de pente et de montagne sur terrain complexe (île de La Réunion).</p>
+        </div>
+        <div class="interest-card">
+          <span class="interest-icon">&#127752;</span>
+          <h3>Couche limite atmosphérique</h3>
+          <p>Circulations thermiques de pente : brises anabatiques et catabatiques, budgets thermodynamiques.</p>
+        </div>
+        <div class="interest-card">
+          <span class="interest-icon">&#9889;</span>
+          <h3>Convection profonde</h3>
+          <p>Interactions aérosol–microphysique–rayonnement–électricité dans les systèmes convectifs (projet ICCARE).</p>
+        </div>
+        <div class="interest-card">
+          <span class="interest-icon">&#128300;</span>
+          <h3>Modélisation Meso-NH</h3>
+          <p>Simulations haute résolution, schéma microphysique LIMA, couplage avec ecRad.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Samira El Gdachi &middot; <a href="contact.html">Contact</a></p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.08});
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
 </html>

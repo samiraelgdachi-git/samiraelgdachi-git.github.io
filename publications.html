@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications — Samira El Gdachi</title>
+  <meta name="description" content="Publications et présentations de Samira El Gdachi : articles de revues, articles en préparation, conférences internationales.">
+  <meta name="theme-color" content="#0a1628">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .pub-list { list-style: none; }
+    .pub-item {
+      padding: 1.25rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.85rem;
+      transition: border-color 0.2s, background 0.2s;
+      background: rgba(15, 31, 56, 0.45);
+    }
+    .pub-item:hover {
+      border-color: var(--border-hover);
+      background: var(--bg-card);
+    }
+    .pub-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+      line-height: 1.5;
+    }
+    .pub-authors {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.15rem;
+    }
+    .pub-authors strong { color: var(--text-primary); }
+    .pub-venue {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+    .pub-doi {
+      font-size: 0.83rem;
+      font-weight: 500;
+    }
+
+    /* Filter tabs */
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .filter-tab {
+      background: rgba(15,31,56,0.4);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .filter-tab:hover,
+    .filter-tab.active {
+      background: rgba(94,173,247,0.12);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">S. El Gdachi</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="research.html">Recherche</a>
+      <a href="publications.html" class="active">Publications</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <section class="fade-in">
+    <h2 class="section-title">Publications &amp; Présentations</h2>
+    <hr class="section-divider">
+
+    <!-- Filter -->
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterPubs('all', this)">Tout</button>
+      <button class="filter-tab" onclick="filterPubs('article', this)">Articles</button>
+      <button class="filter-tab" onclick="filterPubs('prep', this)">En préparation</button>
+      <button class="filter-tab" onclick="filterPubs('conf', this)">Conférences</button>
+    </div>
+
+    <ul class="pub-list" id="pubList">
+
+      <!-- ═══ ARTICLES ═══ -->
+      <li class="pub-item" data-type="article">
+        <span class="tag tag-article">Article</span>
+        <div class="pub-title">Thermodynamic processes driving thermal circulations on slopes: Modeling anabatic and katabatic flows on Reunion Island</div>
+        <div class="pub-authors"><strong>S. El Gdachi</strong> et al.</div>
+        <div class="pub-venue">Journal of Geophysical Research: Atmospheres, vol. 129, no. 17, 2024</div>
+        <a class="pub-doi" href="https://doi.org/10.1029/2023JD040431" target="_blank" rel="noopener">doi:10.1029/2023JD040431 →</a>
+      </li>
+
+      <li class="pub-item" data-type="article">
+        <span class="tag tag-article">Article</span>
+        <div class="pub-title">Measurement report: Bio-physicochemistry of tropical clouds at Maïdo (Réunion, Indian Ocean) — Overview of results from the BIO-MAÏDO campaign</div>
+        <div class="pub-authors">M. Leriche, <strong>S. El Gdachi</strong> et al.</div>
+        <div class="pub-venue">Atmospheric Chemistry and Physics, vol. 24, no. 7, pp. 4129–4155, 2024</div>
+        <a class="pub-doi" href="https://doi.org/10.5194/acp-24-4129-2024" target="_blank" rel="noopener">doi:10.5194/acp-24-4129-2024 →</a>
+      </li>
+
+      <li class="pub-item" data-type="article">
+        <span class="tag tag-article">Article</span>
+        <div class="pub-title">Evaluation of the Sources, Precursors, and Processing of Aerosols at a High-Altitude Tropical Site</div>
+        <div class="pub-authors">P. A. Dominutti, <strong>S. El Gdachi</strong> et al.</div>
+        <div class="pub-venue">ACS Earth and Space Chemistry, vol. 6, no. 10, pp. 2412–2431, 2022</div>
+        <a class="pub-doi" href="https://doi.org/10.1021/acsearthspacechem.2c00149" target="_blank" rel="noopener">doi:10.1021/acsearthspacechem.2c00149 →</a>
+      </li>
+
+      <!-- ═══ EN PRÉPARATION ═══ -->
+      <li class="pub-item" data-type="prep">
+        <span class="tag tag-prep">En préparation</span>
+        <div class="pub-title">A coherent coupling between the LIMA 2-moment mixed phase microphysics scheme and the ecRad radiation scheme</div>
+        <div class="pub-authors">C. Barthe, <strong>S. El Gdachi</strong> et al.</div>
+        <div class="pub-venue">Geoscientific Model Development, 2026</div>
+      </li>
+
+      <li class="pub-item" data-type="prep">
+        <span class="tag tag-prep">En préparation</span>
+        <div class="pub-title">How the life cycle of leeward island orographic clouds can be affected by moisture advection?</div>
+        <div class="pub-authors"><strong>S. El Gdachi</strong> et al.</div>
+        <div class="pub-venue">Atmospheric Chemistry and Physics, 2026</div>
+      </li>
+
+      <li class="pub-item" data-type="prep">
+        <span class="tag tag-prep">En préparation</span>
+        <div class="pub-title">Effect of secondary ice production on the lightning activity of a maritime thunderstorm observed during the EXAEDRE field campaign</div>
+        <div class="pub-authors">I. Vongpaseut, <strong>S. El Gdachi</strong> et al.</div>
+        <div class="pub-venue">Atmospheric Chemistry and Physics, 2026</div>
+      </li>
+
+      <!-- ═══ CONFÉRENCES ═══ -->
+      <li class="pub-item" data-type="conf">
+        <span class="tag tag-conf">Conférence</span>
+        <div class="pub-title">Meso-NH: LIMA Challenges the Aerosol–Microphysics–Radiation Coupling at the Heart of Deep Convection</div>
+        <div class="pub-authors"><strong>S. El Gdachi</strong> and C. Barthe</div>
+        <div class="pub-venue">3rd Scientific Workshop on Deep Convection, Bayonne, France, Nov. 2025</div>
+      </li>
+
+      <li class="pub-item" data-type="conf">
+        <span class="tag tag-conf">Conférence</span>
+        <div class="pub-title">Investigating Cloud Microphysical Properties: High-Resolution Numerical Simulations and Observations in the Indian Ocean Region</div>
+        <div class="pub-authors"><strong>S. El Gdachi</strong>, P. Tulet, A. Rechou, F. Burnet, and M. Leriche</div>
+        <div class="pub-venue">EGU General Assembly, 2024</div>
+        <a class="pub-doi" href="https://doi.org/10.5194/egusphere-egu24-7283" target="_blank" rel="noopener">doi:10.5194/egusphere-egu24-7283 →</a>
+      </li>
+
+      <li class="pub-item" data-type="conf">
+        <span class="tag tag-conf">Conférence</span>
+        <div class="pub-title">Study of thermal circulations and slope clouds on the island of Réunion</div>
+        <div class="pub-authors"><strong>S. El Gdachi</strong>, P. Tulet, and A. Rechou</div>
+        <div class="pub-venue">Atmospheric Modeling Workshop (AMA-CNRM), 2023</div>
+      </li>
+
+      <li class="pub-item" data-type="conf">
+        <span class="tag tag-conf">Conférence</span>
+        <div class="pub-title">Study of thermal circulations and slope clouds on the island of Réunion: Thermodynamic budgets</div>
+        <div class="pub-authors"><strong>S. El Gdachi</strong>, P. Tulet, and A. Rechou</div>
+        <div class="pub-venue">Meso-NH Meeting, 2023</div>
+      </li>
+
+      <li class="pub-item" data-type="conf">
+        <span class="tag tag-conf">Conférence</span>
+        <div class="pub-title">Dynamic circulations and Windward Flow over Reunion Island</div>
+        <div class="pub-authors"><strong>S. El Gdachi</strong>, P. Tulet, and A. Réchou</div>
+        <div class="pub-venue">EGU General Assembly, 2023</div>
+        <a class="pub-doi" href="https://doi.org/10.5194/egusphere-egu23-127" target="_blank" rel="noopener">doi:10.5194/egusphere-egu23-127 →</a>
+      </li>
+
+    </ul>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Samira El Gdachi &middot; <a href="contact.html">Contact</a></p>
+</footer>
+
+<script>
+function filterPubs(type, btn) {
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.pub-item').forEach(item => {
+    item.style.display = (type === 'all' || item.dataset.type === type) ? '' : 'none';
+  });
+}
+const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.08});
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
