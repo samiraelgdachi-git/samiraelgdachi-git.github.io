@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV — Samira El Gdachi</title>
+  <meta name="description" content="CV of Samira El Gdachi: education, skills, awards, leadership.">
+  <meta name="theme-color" content="#0a1628">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .dl-btn{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(94,173,247,0.12);border:1px solid var(--accent);color:var(--accent);font-family:var(--font-mono);font-size:0.82rem;padding:0.6rem 1.4rem;border-radius:50px;text-decoration:none;transition:background 0.2s,transform 0.2s;margin-bottom:2.5rem;}
+    .dl-btn:hover{background:rgba(94,173,247,0.2);transform:translateY(-1px);color:var(--accent)!important;}
+    .dl-btn svg{width:16px;height:16px;}
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;}
+    .skill-card{padding:1.25rem 1.4rem;border:1px solid var(--border);border-radius:var(--radius-sm);background:rgba(15,31,56,0.35);transition:border-color 0.25s,transform 0.25s;}
+    .skill-card:hover{border-color:var(--border-hover);transform:translateY(-2px);}
+    .skill-card h3{font-size:0.95rem;font-weight:600;margin-bottom:0.35rem;}
+    .skill-card p{font-size:0.85rem;color:var(--text-secondary);line-height:1.6;}
+    .lang-grid{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.5rem;}
+    .lang-chip{padding:0.55rem 1.2rem;border:1px solid var(--border);border-radius:50px;font-size:0.88rem;color:var(--text-primary);background:rgba(15,31,56,0.35);}
+    .lang-chip span{color:var(--text-muted);font-size:0.78rem;margin-left:0.3rem;}
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">S. El Gdachi</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html" class="active">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <section class="fade-in" style="margin-bottom:3.5rem;">
+    <h2 class="section-title">Curriculum Vitae</h2>
+    <hr class="section-divider">
+    <a class="dl-btn" href="CV_EL_GDACHI_SAMIRA_ESTEEM.pdf" download>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+      Download CV (PDF)
+    </a>
+  </section>
+
+  <section class="fade-in" style="margin-bottom:3.5rem;">
+    <h2 class="section-title">Education</h2>
+    <hr class="section-divider">
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Ph.D. in Atmospheric Physics</h3>
+        <div class="org">University of Reunion, France</div>
+        <div class="dates">Oct 2021 – Sep 2024</div>
+        <p><em>"The evolution of the atmospheric boundary layer and mountain clouds on Reunion Island."</em></p>
+      </div>
+      <div class="timeline-item">
+        <h3>Engineering Diploma (eq. M.Sc)</h3>
+        <div class="org">EHTP — Hassania School of Public Works, Morocco</div>
+        <div class="dates">Sep 2018 – Jul 2021</div>
+        <p>Meteorology and Climate Science.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Engineering Studies — Electrical Engineering</h3>
+        <div class="org">ENSAO — National School of Applied Sciences</div>
+        <div class="dates">Sep 2017 – Jul 2018</div>
+      </div>
+      <div class="timeline-item">
+        <h3>Preparatory Classes (TSI)</h3>
+        <div class="org">Technical High School</div>
+        <div class="dates">Sep 2015 – Jul 2017</div>
+        <p>Technology and Industrial Sciences.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-in" style="margin-bottom:3.5rem;">
+    <h2 class="section-title">Skills</h2>
+    <hr class="section-divider">
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Atmospheric Modeling</h3>
+        <p>High-resolution numerical simulations using Meso-NH: LIMA microphysics, deep convection, orographic clouds, aerosol–cloud–radiation interactions.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Model Development &amp; Diagnostics</h3>
+        <p>Development and implementation of custom diagnostics; analysis of physical processes, process-level budgets, parameterization evaluation.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Programming &amp; Scientific Computing</h3>
+        <p>Python and R for data analysis and post-processing. Fortran 90 for model development and atmospheric physics routines.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Data Analysis</h3>
+        <p>Processing, analysis, and interpretation of large observational and model datasets from field campaigns and numerical simulations.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Scientific Writing</h3>
+        <p>Preparation of scientific manuscripts, technical reports, and research documentation for international peer-reviewed journals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-in" style="margin-bottom:3.5rem;">
+    <h2 class="section-title">Languages</h2>
+    <hr class="section-divider">
+    <div class="lang-grid">
+      <div class="lang-chip">Arabic <span>· Native</span></div>
+      <div class="lang-chip">Amazigh <span>· Native</span></div>
+      <div class="lang-chip">French <span>· Fluent</span></div>
+      <div class="lang-chip">English <span>· Professional</span></div>
+    </div>
+  </section>
+
+  <section class="fade-in" style="margin-bottom:3.5rem;">
+    <h2 class="section-title">Fellowships &amp; Awards</h2>
+    <hr class="section-divider">
+    <div class="award-row">
+      <div class="award-year">2026</div>
+      <div class="award-body">
+        <h3>Seal of Excellence (89.20%)</h3>
+        <p>Marie Skłodowska-Curie Actions (MSCA) Postdoctoral Fellowship — Host: Dr. Blaž Gasparini, University of Vienna, Austria.</p>
+      </div>
+    </div>
+    <div class="award-row">
+      <div class="award-year">2021 – 2024</div>
+      <div class="award-body">
+        <h3>Ph.D. Scholarship</h3>
+        <p>Department of Science, University of La Réunion, France.</p>
+      </div>
+    </div>
+    <div class="award-row">
+      <div class="award-year">2021</div>
+      <div class="award-body">
+        <h3>ERASMUS Scholarship</h3>
+        <p>University of La Réunion, France.</p>
+      </div>
+    </div>
+    <div class="award-row">
+      <div class="award-year">2023</div>
+      <div class="award-body">
+        <h3>Les Doctoriales — 3rd Prize</h3>
+        <p>Innovation and entrepreneurship event, University of Reunion.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <h2 class="section-title">Leadership &amp; Service</h2>
+    <hr class="section-divider">
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Member — Doctoral School Council</h3>
+        <div class="org">Science &amp; Technology Department, University of La Réunion</div>
+        <div class="dates">Feb 2023 – Dec 2024</div>
+      </div>
+      <div class="timeline-item">
+        <h3>Head of Media &amp; Design Cell</h3>
+        <div class="org">Rotaract EHTP — Rotary International</div>
+        <div class="dates">Sep 2018 – Jul 2020</div>
+        <p>Youth charity club leadership, managing media and design activities.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Samira El Gdachi &middot; <a href="contact.html">Contact</a></p>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.08});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
